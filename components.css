@@ -1,0 +1,46 @@
+#messages-wrapper {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: scroll; }
+
+.message-block {
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+  background-color: #00387C;
+  border-radius: 10px;
+  color: #ffffff;
+  min-width: 200px;
+  max-width: 80%;
+  text-align: center;
+  position: relative;
+  font-size: 16px;
+  font-family: "Lato"; }
+  .message-block:before {
+    content: " ";
+    border-right: 20px solid #00387C;
+    position: absolute;
+    left: -10px;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 0;
+    bottom: 0px; }
+  .message-block[data-role="user-input"] {
+    color: #00387C;
+    background-color: #ffffff;
+    align-self: flex-end; }
+    .message-block[data-role="user-input"]:before {
+      content: none; }
+    .message-block[data-role="user-input"]:after {
+      content: " ";
+      border-left: 20px solid #ffffff;
+      position: absolute;
+      right: -10px;
+      border-bottom: 10px solid transparent;
+      border-top: 10px solid transparent;
+      border-right: 0;
+      bottom: 0px; }
+
+/*# sourceMappingURL=components.css.map */

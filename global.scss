@@ -1,0 +1,73 @@
+@import '_mixins';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(assets/conversationWithoutText.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 100vh;
+	margin: 0;
+}
+
+#dove-video {
+	display: none;
+}
+
+#intro-image {
+	background-image: url(assets/intro-image.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 9;
+	transition: height 1s ease-in;
+	transition-delay: 3s;
+	
+	&.fadeOut {
+		height: 0;
+	}
+}
+
+#main-wrapper {
+	height: 85%;
+	width: 100%;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+footer {
+	height: 15%;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+	button {
+		background-color: $user-button;
+		font-size: 16px;
+		font-family: map-get($fonts, font1);
+		line-height: 1.5em;
+		padding: 10px 30px;
+		color: $color-white;
+		border: none;
+	}
+	
+	input {
+		padding: 5px;
+		height: 44px;
+		font-size: 16px;
+		font-family: map-get($fonts, font1);
+		border: 1px solid $user-button;
+		min-width: 100px;
+		max-width: 150px;
+	}
+}
